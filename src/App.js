@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
+import Board from './Board';
 import './App.css';
 
-function App() {
+
+// Simple app that displays LightsOut game
+function App () {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Lights Out!</h1>
+      <p>Objective: Click cells to turn lights on/off of selected cell, and all adjacent cells. You win when all cell lights are turned off! Good luck!</p>
+      <Board numRows={5} numCols={5} />
     </div>
   );
 }
+
 
 export default App;
